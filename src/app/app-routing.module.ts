@@ -10,6 +10,11 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
+    path:"**",
+    pathMatch:'full',
+    redirectTo:'home'
+  },
+  {
     path:'heroe',
     component:HeroeComponent
   },
