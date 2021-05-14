@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HeroeInterface } from 'src/app/domain/interface/interfaceHeroe';
+import {HeroesService} from '../../services/heroes.service';
 
 @Component({
   selector: 'app-heroe',
@@ -6,10 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroe.component.css']
 })
 export class HeroeComponent implements OnInit {
+  
+   data = [];
+   heroe :any = {};
+  @Output() estadoTable : EventEmitter<boolean>;
 
-  constructor() { }
+
+  constructor(private service:HeroesService, private activateRoute: ActivatedRoute ) { 
+    
+    
+  }
 
   ngOnInit(): void {
+    this.data = this.service.getHeroes();
   }
+
+  public detalles(id){
+    this.activateRoute.params.subscribe(params =>{
+      this.heroe = this.service.getHeroe(id);
+      console.log(this.heroe);
+    })
+  
+  }
+
+  mostraTable(){
+    
+    console.log("click table");
+  }
+
 
 }

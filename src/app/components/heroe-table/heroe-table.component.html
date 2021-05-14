@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dato of dataTableImput">
+            <td>{{dato.id}}</td>
+            <td>{{dato.nombre}}</td>
+            <td>{{dato.bio}}</td>
+            <td><img style="height: 69px;" src="{{dato.img}}"></td>
+        </tr>
+
+    </tbody>
+</table>
