@@ -17,7 +17,7 @@ export class HeroesService {
   }
 
   getHeroe(id:any){
-    return this.heroes.find(heroe => heroe.id == id);
- 
+    let resp = this.heroes.find(heroe => heroe.id == id);
+    return resp;
   }
 }

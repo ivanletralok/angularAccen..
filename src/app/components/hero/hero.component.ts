@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -9,18 +10,24 @@ export class HeroComponent implements OnInit {
 
   //lo que recibe de otro componente
   @Input() heroeInput: any = {};
-  @Input() index:number;
+  @Input() indexInput:number;
 
   //lo que envia a otro componente
   @Output() heroeSeleccionado: EventEmitter<number>;
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
 
   mostraTabla(){
-    
+
   }
+
+  vertHeroe(){
+    this.router.navigate(['/heroe', this.indexInput])
+  }
+
+  
 
 }
