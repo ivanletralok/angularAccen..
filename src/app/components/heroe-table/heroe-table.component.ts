@@ -6,14 +6,24 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./heroe-table.component.css']
 })
 export class HeroeTableComponent implements OnInit {
+    mostrar = false;
+    cont = 0;
 
   @Input() dataTableImput:any[] = [];
 
   constructor() { }
-
   ngOnInit(): void {
-    console.log(this.dataTableImput);
   }
 
-  
+  mostrarTable(){
+    this.cont++;
+    if(this.cont == 1){
+      this.mostrar = true;
+
+    }else{
+      this.mostrar = false;
+      this.cont = 0;
+
+    }
+  }
 }

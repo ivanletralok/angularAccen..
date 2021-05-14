@@ -1,4 +1,6 @@
-<table class="table">
+<button (click)="mostrarTable()" type="button" class="btn btn-info">Mostrar Tabla</button>
+
+<table class="table" *ngIf="mostrar  == true ">
     <thead>
         <tr>
             <th scope="col">Id</th>

@@ -12,7 +12,6 @@ export class HeroeComponent implements OnInit {
   
    data = [];
    heroe :any = {};
-  @Output() estadoTable : EventEmitter<boolean>;
 
 
   constructor(private service:HeroesService, private activateRoute: ActivatedRoute ) { 
@@ -30,11 +29,6 @@ export class HeroeComponent implements OnInit {
       console.log(this.heroe);
     })
   
-  }
-
-  mostraTable(){
-    
-    console.log("click table");
   }
 
 

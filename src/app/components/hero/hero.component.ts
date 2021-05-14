@@ -19,6 +19,8 @@ export class HeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  mostraTabla(){
+    
+  }
 
 }
