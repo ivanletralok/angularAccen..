@@ -6,6 +6,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearcHeroeComponent } from './components/searc-heroe/searc-heroe.component';
 
+
 const routes: Routes = [
   {
     path:"",

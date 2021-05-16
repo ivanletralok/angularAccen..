@@ -11,6 +11,7 @@ export class HeroeComponent implements OnInit {
    data = [];
    heroe :any = {};
    search:boolean = false;
+   page:number;
 
 
   constructor(private service:HeroesService ) { 

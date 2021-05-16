@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeroeTableComponent implements OnInit {
     mostrar = false;
     cont = 0;
+    page:number;
 
   @Input() dataTableImput:any[] = [];
 

@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dato of dataTableImput">
+        <tr *ngFor="let dato of dataTableImput | paginate: { itemsPerPage: 3, currentPage: page } ">
             <td>{{dato.id}}</td>
             <td>{{dato.nombre}}</td>
             <td>{{dato.bio}}</td>
@@ -19,3 +19,4 @@
 
     </tbody>
 </table>
+<pagination-controls *ngIf="mostrar  == true " (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>

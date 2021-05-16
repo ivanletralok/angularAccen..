@@ -2,7 +2,8 @@
     <h2>Heroes y Marvel</h2>
     <hr>
     <div class="row row-cols-1 row-cols-md-3 g-3">
-        <app-hero class="animated fadeIn" [heroeInput]="heroeI" [indexInput]="i+1" *ngFor="let heroeI of data; let i = index"></app-hero>
+        <app-hero class="animated fadeIn" [heroeInput]="heroeI" [indexInput]="i+1" *ngFor="let heroeI of data | paginate: { itemsPerPage: 3, currentPage: page }; let i = index"></app-hero>
+        <pagination-controls class="pagination" (pageChange)="page = $event" previousLabel="Anterior " nextLabel="Siguiente"></pagination-controls>
     </div>
 
     <app-heroe-table [dataTableImput]="data"></app-heroe-table>
