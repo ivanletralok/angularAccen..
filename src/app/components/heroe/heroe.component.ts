@@ -1,6 +1,4 @@
 import { Component, OnInit,EventEmitter, Output} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HeroeInterface } from 'src/app/domain/interface/interfaceHeroe';
 import {HeroesService} from '../../services/heroes.service';
 
 @Component({
@@ -12,9 +10,10 @@ export class HeroeComponent implements OnInit {
   
    data = [];
    heroe :any = {};
+   search:boolean = false;
 
 
-  constructor(private service:HeroesService, private activateRoute: ActivatedRoute ) { 
+  constructor(private service:HeroesService ) { 
     
     
   }
@@ -23,13 +22,5 @@ export class HeroeComponent implements OnInit {
     this.data = this.service.getHeroes();
   }
 
-  public detalles(id){
-    this.activateRoute.params.subscribe(params =>{
-      this.heroe = this.service.getHeroe(id);
-      console.log(this.heroe);
-    })
   
-  }
-
-
 }

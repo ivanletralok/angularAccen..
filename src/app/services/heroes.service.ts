@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HeroeInterface } from '../domain/interface/interfaceHeroe';
-import {heroesData} from '../domain/mocks/data';
+import { heroesData } from '../domain/mocks/data';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class HeroesService {
-  private heroes:HeroeInterface[] = heroesData;
+  private heroes: HeroeInterface[] = heroesData;
 
 
-  constructor( ) { }
+  constructor() { }
 
-  getHeroes(){
+  getHeroes() {
     return this.heroes;
   }
 
-  getHeroe(id:any){
+  getHeroe(id: any) {
     let resp = this.heroes.find(heroe => heroe.id == id);
     return resp;
+  }
+
+  getHeroName(nombre:any) {
+    let respons = this.heroes.find(heroe => heroe.nombre == nombre);
+    return respons;
+
   }
 }

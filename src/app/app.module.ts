@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroeDetalleComponent } from './components/heroe-detalle/heroe-detalle.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroeTableComponent } from './components/heroe-table/heroe-table.component';
+import { SearcHeroeComponent } from './components/searc-heroe/searc-heroe.component';
 
 
 @NgModule({
@@ -22,11 +24,13 @@ import { HeroeTableComponent } from './components/heroe-table/heroe-table.compon
     HeroeDetalleComponent,
     HeroComponent,
     HeroeTableComponent,
+    SearcHeroeComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

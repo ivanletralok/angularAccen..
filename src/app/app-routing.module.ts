@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroeDetalleComponent } from './components/heroe-detalle/heroe-detalle.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearcHeroeComponent } from './components/searc-heroe/searc-heroe.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'heroe/:id',
     component:HeroeDetalleComponent
+  },
+  {
+    path:'heroes/:nombre',
+    component:SearcHeroeComponent
   },
   {
     path:'about',
