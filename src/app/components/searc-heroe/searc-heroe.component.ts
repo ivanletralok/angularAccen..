@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute , Router} from '@angular/router';
 import { HeroeInterface } from 'src/app/domain/interface/interfaceHeroe';
 import { HeroesService } from 'src/app/services/heroes.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-searc-heroe',
@@ -16,7 +17,7 @@ export class SearcHeroeComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
         this.hero = this.heroeService.getHeroName(params['nombre']);
         if(this.hero == null){
-            alert('Dato no encontrado')
+            Swal.fire("Dato no localizado");
             this.router.navigate(['heroe']);
         }
 

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -23,7 +25,12 @@ export class NavBarComponent implements OnInit {
 
 
     } else {
-      alert("dato vacio!")
+      Swal.fire({
+        title: 'Error!',
+        text: 'El Campo no Puede Estar Vacio',
+        icon: 'error',
+        confirmButtonText: 'Enter'
+      })
     }
   }
 

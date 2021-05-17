@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
 import { NgxPaginationModule } from 'ngx-pagination';
+import Swal from 'sweetalert2'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +35,7 @@ import { SearcHeroeComponent } from './components/searc-heroe/searc-heroe.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
