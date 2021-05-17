@@ -7,6 +7,8 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Imagen</th>
+            <th scope="col">Accion</th>
+
         </tr>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
             <td>{{dato.nombre}}</td>
             <td>{{dato.bio}}</td>
             <td><img style="height: 69px;" src="{{dato.img}}"></td>
+            <td><img (click)="delete(dato.id)" class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR+2X0U3DMBCGPyNVQqQP5w0YgQ1oNygT0BHYgLJJmYBuAExAR6AT+JASCQmUIAchIbkuNkQKD77X/Prvu99OdDGMXGbk/mQDuKnMgC4K/s7Ovupz6mBZAG4qKzqufzDfMmFuVTUFIhnAncgCw12KKYaNrfUiRRsA9FO2eyI2XAGSYtprDBtatoG+5fb7EYUAlcTPN7n7AaFhbmt9+FL8P4AhhszxiF5CdyynHHGZYxbVGna20fW+53EA/7533A8CAI+2Uf/9CKoAlARKAiWBkkBJoCRQEognUMkZ8DTIQmK4sbWushYSL3aV+O31/I8QL8DMNhqu6P32fqCciPDGElj8EsI3Xceaf/4+jFyjA3wAqOOlIfdky2cAAAAASUVORK5CYII="
+                /></td>
         </tr>
 
     </tbody>

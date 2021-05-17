@@ -16,6 +16,8 @@ import { HeroeDetalleComponent } from './components/heroe-detalle/heroe-detalle.
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroeTableComponent } from './components/heroe-table/heroe-table.component';
 import { SearcHeroeComponent } from './components/searc-heroe/searc-heroe.component';
+import 'boxicons';
+
 
 
 @NgModule({
